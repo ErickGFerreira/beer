@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PagTest</string>
+    <string name="click_for_more_info">Clique para saber mais</string>
+    <string name="beer_options_toolbar_text">Beers</string>
+</resources>

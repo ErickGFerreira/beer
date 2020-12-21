@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/beer_navigation"
+    app:startDestination="@id/beerOptionsFragment">
+
+    <fragment
+        android:id="@+id/beerOptionsFragment"
+        android:name="com.egferreira.pagtest.beers.ui.BeerOptionsFragment"
+        android:label="BeerOptionsFragment">
+        <action
+            android:id="@+id/goToBeerInfoFragment"
+            app:destination="@id/beerInfoFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/beerInfoFragment"
+        android:name="com.egferreira.pagtest.beers.ui.BeerInfoFragment"
+        android:label="BeerInfoFragment">
+        <argument
+            android:name="beerInfo"
+            app:argType="com.egferreira.pagtest.beers.response.BeerResponse" />
+    </fragment>
+</navigation>

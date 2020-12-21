@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/medium_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/berrOptionImageView"
+            android:layout_width="48dp"
+            android:layout_height="96dp"
+            android:layout_margin="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/beerOptionNameTextView"
+            style="@style/TextStyle.OpenSans.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/beerOptionAbvTextView"
+            app:layout_constraintEnd_toStartOf="@id/beerOptionFowardImageView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/berrOptionImageView"
+            tools:text="Heineken" />
+
+        <TextView
+            android:id="@+id/beerOptionAbvTextView"
+            style="@style/TextStyle.OpenSans.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/beerOptionMoreInfoTextView"
+            app:layout_constraintStart_toStartOf="@id/beerOptionNameTextView"
+            tools:text="14.5" />
+
+        <TextView
+            android:id="@+id/beerOptionMoreInfoTextView"
+            style="@style/TextStyle.OpenSans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/click_for_more_info"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/berrOptionImageView"
+            app:layout_constraintStart_toStartOf="@id/beerOptionNameTextView" />
+
+        <ImageView
+            android:id="@+id/beerOptionFowardImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:src="@drawable/ic_foward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

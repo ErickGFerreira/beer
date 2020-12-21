@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/beerInfoToolbar"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/beerInfoGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".5" />
+
+        <ImageView
+            android:id="@+id/beerInfoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintBottom_toTopOf="@id/beerInfoGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beerInfoToolbar"
+            tools:src="@drawable/ic_foward" />
+
+        <TextView
+            android:id="@+id/beerInfoNameTextView"
+            style="@style/TextStyle.OpenSans.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/beerInfoTaglineTextView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beerInfoImageView"
+            tools:text="Buzz" />
+
+        <TextView
+            android:id="@+id/beerInfoTaglineTextView"
+            style="@style/TextStyle.OpenSans.Bold"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/beerInfoNameTextView"
+            tools:text="A Real Bitter Experience" />
+
+        <TextView
+            android:id="@+id/beerInfoAbvTextView"
+            style="@style/TextStyle.OpenSans.Bold"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/beerInfoNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/beerInfoNameTextView"
+            tools:text="14.5% Vol" />
+
+        <TextView
+            android:id="@+id/beerInfoIbuTextView"
+            style="@style/TextStyle.OpenSans.Bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="@id/beerInfoTaglineTextView"
+            app:layout_constraintTop_toBottomOf="@id/beerInfoTaglineTextView"
+            tools:text="IBU 60" />
+
+        <TextView
+            android:id="@+id/beerInfoDescriptionTextView"
+            style="@style/TextStyle.OpenSans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:layout_marginVertical="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/beerInfoTaglineTextView"
+            app:layout_constraintStart_toStartOf="@id/beerInfoNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/beerInfoAbvTextView"
+            app:layout_constraintVertical_bias="0"
+            tools:text="A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
